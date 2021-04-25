@@ -7,6 +7,10 @@ May be used for different pdf files too.
 
 `constants.py` contains a dictionary of available TPM capabilities from the newest TCG specification (as of May 2021).
 
+Structure in the `pdf` folder must be followed, if a new revision is added, add folder `rev{x+1}` and within file `alg.pdf` 
+(TCG TPM Algorithm Registry) and `comm.pdf` (TCG TPM Commands Specification) in their respective folders. Dictionary `res` in `main.py` 
+needs to be updated as well.
+
 ## How to run it:
 
 No arguments or parameters are available, however, you first have to install PyPDF2:
