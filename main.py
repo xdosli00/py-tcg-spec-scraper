@@ -1,6 +1,6 @@
 import PyPDF2
 import os
-import constatnts
+import constants
 import json
 
 
@@ -38,20 +38,20 @@ def processpdf():
         },
     }
     for x in range(1, 6):
-        for algorithm in constatnts.supported_algorithms:
-            if constatnts.supported_algorithms[algorithm] not in algs:
-                algs.append(constatnts.supported_algorithms[algorithm])
-            res['rev' + str(x)]['algorithms'][constatnts.supported_algorithms[algorithm]] = 'no'
+        for algorithm in constants.supported_algorithms:
+            if constants.supported_algorithms[algorithm] not in algs:
+                algs.append(constants.supported_algorithms[algorithm])
+            res['rev' + str(x)]['algorithms'][constants.supported_algorithms[algorithm]] = 'no'
 
-        for command in constatnts.supported_commands:
-            if constatnts.supported_commands[command].replace('CC_', 'TPM2_', 1) not in comm:
-                comm.append(constatnts.supported_commands[command].replace('CC_', 'TPM2_', 1))
-            res['rev' + str(x)]['commands'][constatnts.supported_commands[command].replace('CC_', 'TPM2_')] = 'no'
+        for command in constants.supported_commands:
+            if constants.supported_commands[command].replace('CC_', 'TPM2_', 1) not in comm:
+                comm.append(constants.supported_commands[command].replace('CC_', 'TPM2_', 1))
+            res['rev' + str(x)]['commands'][constants.supported_commands[command].replace('CC_', 'TPM2_')] = 'no'
 
-        for ec in constatnts.supported_ecc:
-            if constatnts.supported_ecc[ec] not in eccs:
-                eccs.append(constatnts.supported_ecc[ec])
-            res['rev' + str(x)]['ecc'][constatnts.supported_ecc[ec]] = 'no'
+        for ec in constants.supported_ecc:
+            if constants.supported_ecc[ec] not in eccs:
+                eccs.append(constants.supported_ecc[ec])
+            res['rev' + str(x)]['ecc'][constants.supported_ecc[ec]] = 'no'
 
     path = 'pdf'
 

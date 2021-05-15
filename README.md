@@ -17,4 +17,8 @@ No arguments or parameters are available, however, you first have to install PyP
 
     pip install PyPDF2
 
+Run:
+
+    python3 main.py
+
 Output is then printed to console (as json)
